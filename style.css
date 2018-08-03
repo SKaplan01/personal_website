@@ -1,9 +1,10 @@
 body {
   width: 100%;
+  background-color: rgb(58, 58, 58);
   display: flex;
   flex-direction: column;
   color: rgb(58, 58, 58);
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
 }
 
 #navbar {
@@ -30,7 +31,6 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   margin: 1em;
-
 }
 
 .dropdown_content a:hover {
@@ -71,22 +71,23 @@ body {
 
 #landing_container {
   width: 100%;
-  height: 600px;
+  height: 700px;
   color: rgb(58, 58, 58);
-  background-color:rgb(255, 145, 111);
+  background-color: rgb(255, 145, 111);
   margin-top: 60px;
   text-align: center;
 }
 
-#landing h1, #landing h3 {
-  letter-spacing: .08em;
+#landing h1,
+#landing h3 {
+  letter-spacing: 0.08em;
 }
 #landing h1 {
   color: rgb(247, 247, 247);
   font-family: 'Cabin', sans-serif;
   font-size: 4em;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   text-transform: uppercase;
 }
 
@@ -95,9 +96,9 @@ body {
   padding-right: 1em;
   color: rgb(58, 58, 58);
   font-size: 2em;
-  font-family: 'Libre Franklin', sans-serif;  
+  font-family: 'Libre Franklin', sans-serif;
 }
-#landing_container div{
+#landing_container div {
   margin-top: 2em;
 }
 
@@ -121,11 +122,11 @@ body {
   }
   #landing h3:nth-last-child(3) {
     margin-right: 0px;
-    padding-right: .1em;
+    padding-right: 0.1em;
   }
   #landing h3:nth-last-child(2) {
     margin-left: 0px;
-    padding-left: .1em;
+    padding-left: 0.1em;
   }
 }
 
@@ -144,171 +145,167 @@ body {
   }
 }
 
-#about {
-  height: 600px;
-}
-
 #about_container {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
+  height: 700px;
 }
-
-#profile_pic {
-  width: 200px;
-  height: 200px;
-  margin: 3em;
-  border-style: solid;
-  border-width: .3em;
-  border-color: rgb(59, 168, 182);
-  border-radius: 200px;
-  margin: auto;
-}
-
-.left_col {
-  flex: 1 1 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 5%;
-  margin-top: 10%;
-}
-
+.left_col,
 .right_col {
-  flex: 2 1 70%;
-  margin-top: 10%;
-  margin-right: 10%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-
 .right_col h1 {
-  padding: 1em;
-  background-color: rgb(59, 168, 182);
-  font-family: 'Cabin', sans-serif;
-  font-size: 36px;
-  text-transform: uppercase;
-  color: rgb(58, 58, 58);
-  text-align: center;
-  margin-bottom: 0px;
+  padding-top: 1em;
 }
-
-.right_col div {
-  margin-top: 0px;
-  padding: 1em;
-  background-color: rgb(247, 247, 247);
-  font-family: 'Libre Franklin', sans-serif;  
+.right_col p {
+  padding: 0.5em;
+  margin: 1.5em;
+  font-family: 'Libre Franklin', sans-serif;
+  line-height: 1.5em;
 }
-
 .left_col button {
-  background-color: rgb(247, 247, 247);
-  font-family: 'Libre Franklin', sans-serif;  
-  padding: 3%;
-  width: 60%;
-  margin: auto;
-  border-width: .25em;
+  width: 6em;
+  margin-top: 2em;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: rgb(39, 39, 39);
+  padding: 0.5em;
+  background-color: rgb(79, 179, 192);
+  border-style: solid;
+  border-color: rgb(247, 247, 247);
+  border-width: 0.15em;
+  border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  #about_container {
-    display: block;
+.left_col button:hover {
+  border-color: rgb(59, 168, 182);
+  background-color: rgb(247, 247, 247);
+}
+
+#hidden_about,
+.right_col div:first-child {
+  background-color: rgb(59, 168, 182);
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+}
+
+.left_col div {
+  background-color: rgb(58, 58, 58);
+}
+
+.left_col div:last-child {
+  text-align: center;
+}
+
+.right_col div:last-child {
+  background-color: rgb(247, 247, 247);
+}
+
+@media (min-width: 801px) {
+  #hidden_about {
+    display: none;
+  }
+  #profile_pic {
+    width: 290px;
+    height: 350px;
+    margin-bottom: 0px;
+  }
+  .left_col,
+  .right_col {
+    padding-top: 60px;
   }
   .left_col {
-    width: 100%;
+    flex: 0 0 290px;
   }
   .right_col {
-    width: 100%;
+    flex: 1 1 500px;
   }
-}
-/*
-#text_container_two, #pic_container {
-  margin-top: 60px;
-  font-family: 'Cabin', sans-serif;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  text-align: center;
-  padding: 10%;
-  padding-right: 5%;
-}
-
-#pic_container {
-  padding-right: 0%;  
-}
-
-#text_container_two div:first-child {
-  background-color: rgb(59, 168, 182);
-  font-size: 28px;
-  text-transform: uppercase;
-  padding: 5%;
-}
-
-#text_container_two div:last-child {
-  background-color: rgb(247, 247, 247);
-  font-family: 'Libre Franklin', sans-serif;  
-  padding: 5%;
-}
-
-#about div:first-child {
-  flex: 2 1 400px;
-}
-
-#about div:last-child {
-  order: -1;
-  flex: 0 1 300px;
+  .left_col div {
+    width: 290px;
+  }
+  .left_col div:first-child {
+    flex: 0 0 350px;
+  }
+  .left_col div:last-child {
+    flex: 2 1 250px;
+  }
+  .right_col div:first-child {
+    flex: 0 0 150px;
+    font-size: 18px;
+  }
+  .right_col div:last-child {
+    height: 350px;
+    flex: 1 1 100px;
+  }
 }
 
 @media (max-width: 800px) {
+  #hidden_about {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    display: block;
+    width: 100%;
+    font-size: 28px;
+  }
   #profile_pic {
-    width: 250px;
-    height: 250px;
+    width: 217.5px;
+    height: 262.5px;
+    margin-top: 0px;
   }
-  #text_container_two div:first-child {
-    font-size: 28px;
-    text-transform: uppercase;
-    padding: 5%;
+  .left_col {
+    width: 100%;
+    flex: 0 0 217.5;
+    align-items: center;
   }
-}
-
-@media (max-width: 700px) {
-  #about {
-    flex-direction: column;
-    justify-content: center;
-  } 
-  #text_container_two {
-    box-sizing: border-box;
-    flex-grow: 2;
-    margin: auto;
-    order: -1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: .75em;
+  .right_col {
+    flex: 1 1 auto;
+    align-items: center;
   }
-  #pic_container {
-    margin: auto;
+  .left_col div:last-child {
+    text-align: center;
+  }
+  .right_col div:first-child {
+    display: none;
+  }
+  .right_col div:last-child {
+    flex: 1 1 auto;
   }
 }
 
-@media (max-width: 550px) {
-  #text_container_two div:first-child {
-    background-color: yellow;
-    font-size: 30px;
-    line-height: 2.2em;
-    padding-top: 1.5em;
-    margin-bottom: .75em;
+@media (max-width: 600px) {
+  #hidden_about {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    font-size: 22px;
   }
-  #text_container_two div:last-child {
-    background-color: mintcream;
-    font-size: 28px;
-    line-height: 1.5em;
-    margin-bottom: 0em;
+  #about_container {
+    flex-direction: column;
+  }
+  #profile_pic {
+    width: 133px;
+    height: 167px;
+    border-radius: 100px;
+    margin-top: 1.15em;
+  }
+  .left_col button {
+    width: 10em;
+    margin-top: 0.9em;
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: 0.25em;
+  }
+  .left_col {
+    height: 400px;
   }
 }
-*/
+
+@media (max-width: 320px) {
+  .left_col {
+    height: 470px;
+  }
+}
 
 #contact {
   height: 700px;
